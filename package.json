@@ -1,0 +1,35 @@
+{
+  "name": "web3js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cross-env PUBLIC_PATH=/js/ BUILD_FOLDER_PATH=build/js NODE_ENV=development webpack serve",
+    "build": "cross-env PUBLIC_PATH=/js/ BUILD_FOLDER_PATH=build/js NODE_ENV=production npx webpack",
+    "format": "prettier --write '**/*.js' --ignore-path .gitignore",
+    "lint": "npx eslint -c .eslintrc  --fix $(git diff --name-only remotes/origin/master... --diff-filter=d | grep -E \"(.js$|.ts$|.tsx$|.jsx)\")",
+    "test": "jest",
+    "test-watch": "jest --watchAll --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "dotenv-webpack": "^7.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "path": "^0.12.7",
+    "serve": "^12.0.0",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.70.0",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "lodash": "^4.17.21",
+    "qrcode-with-logos": "^1.0.3",
+    "three": "^0.139.0",
+    "ua-parser-js": "^0.7.28"
+  }
+}

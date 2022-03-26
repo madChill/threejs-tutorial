@@ -1,0 +1,28 @@
+{
+  "name": "foot-print1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack --config webpack.config.dev",
+    "start": "serve dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "serve": "^12.0.0",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.52.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "lodash": "^4.17.21",
+    "qrcode-with-logos": "^1.0.3",
+    "ua-parser-js": "^0.7.28"
+  }
+}
